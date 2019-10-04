@@ -41,11 +41,35 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(arr.length);
 }
+
+function sentence(length) {
+  return `The items array has ${length} items in it!`
+};
+
+const challenge1 = getLength(items, sentence);
+
+console.log(challenge1);
+
+/*=====================================================================*/
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr[3]);
 }
+
+function  lastItem (cb) {
+  return `The last item in the array is ${cb}`;
+}
+
+const challenge2 = last(items, lastItem);
+
+console.log(challenge2);
+
+/*=====================================================================*/
+
+// console.log(last(items));
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
