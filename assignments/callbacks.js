@@ -73,7 +73,16 @@ console.log(challenge2);
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y);
 }
+
+function addition(cb) {
+  return `x + y = ${cb}`
+}
+
+let challenge3 = sumNums(1, 2, addition);
+
+console.log(challenge3);
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
