@@ -104,7 +104,19 @@ console.log(challenge4);
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  return cb(list.includes(item));
 }
+
+function check (cb) {
+  if (cb == true) {
+    return `The array contains this item`;
+  } 
+  return `The array DOES NOT contain this item`;
+}
+
+let challenge5 = contains('Pencil', items, check);
+
+console.log(challenge5);
 
 /* STRETCH PROBLEM */
 
