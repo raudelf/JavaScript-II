@@ -77,16 +77,29 @@ function sumNums(x, y, cb) {
 }
 
 function addition(cb) {
-  return `x + y = ${cb}`
+  return `The addition answer is ${cb}`
 }
 
 let challenge3 = sumNums(1, 2, addition);
 
 console.log(challenge3);
 
+/*=====================================================================*/
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x*y);
 }
+
+function multiplication(cb){
+  return `The multiplication answer is ${cb}`
+}
+
+let challenge4 = multiplyNums(2, 3, multiplication);
+
+console.log(challenge4);
+
+/*=====================================================================*/
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
